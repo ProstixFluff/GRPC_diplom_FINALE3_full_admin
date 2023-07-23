@@ -1,0 +1,55 @@
+syntax = "proto3";
+package com.example.grpc;
+
+message LicensePlateRequest{
+
+  string PlateRequest = 1;
+
+}
+
+message LicensePlateResponse{
+
+  string PlateResponse = 1;
+
+}
+
+service LicensePlateService{
+
+  rpc greeting(LicensePlateRequest) returns (LicensePlateResponse);
+
+}
+
+message BarrierRequest{
+
+  bool BarrierRequest = 1;
+
+}
+
+message BarrierResponse{
+
+  bool BarrierResponse = 1;
+
+}
+
+service BarrierService{
+
+  rpc greeting2(BarrierRequest) returns (BarrierResponse);
+
+}
+
+message BarrierOpenRequest{
+
+  bool BarrierOpenRequest = 1;
+}
+
+message BarrierOpenResponse{
+
+  bool BarrierOpenResponse = 1;
+
+}
+
+service BarrierOpenService{
+
+  rpc greeting3(BarrierOpenRequest) returns (BarrierOpenResponse);
+
+}
